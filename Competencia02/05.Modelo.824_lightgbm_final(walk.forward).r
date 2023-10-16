@@ -73,7 +73,7 @@ PARAM$finalmodel$lgb_basicos <- list(
 setwd("~/buckets/b1")
 
 # cargo el dataset donde voy a entrenar
-#dataset <- fread(PARAM$input$dataset, stringsAsFactors = TRUE)
+dataset <- fread(PARAM$input$dataset, stringsAsFactors = TRUE)
 
 
 # Catastrophe Analysis  -------------------------------------------------------
