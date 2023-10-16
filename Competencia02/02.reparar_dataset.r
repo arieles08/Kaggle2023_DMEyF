@@ -5,7 +5,7 @@ gc()             #garbage collection
 require("data.table")
 
 #------------------------------------------------------------------------------
-#Funcion para corregir Zeros reemplazando con el VALOR DEL MES SIGUIENTE del mes anterior y previo
+#Funcion para corregir Zeros reemplazando con el PROMEDIO del mes anterior y previo
 
 fixzerosavg <- function(pcampo, pmeses, dataset) {
   #Creamos tbl obteniendo el valor del mes previo (lag) y siguiente (lead) de la variable (pcampo) para cada cliente.
@@ -116,7 +116,7 @@ apply_fixzerosavg <- function(dataset) {
 }
 
 #---------------------------------------------------------------------------
-#Funcion para corregir Zeros reemplazando con el VALOR DEL MES SIGUIENTE del mes anterior y previo
+#Funcion para corregir Zeros reemplazando con el VALOR DEL MES SIGUIENTE 
 fixzerosnext <- function(pcampo, pmeses, dataset) {
   #Creamos tbl obteniendo el valor del mes siguiente (lead) de la variable (pcampo) para cada cliente.
   tbl <- dataset[, list("lead" = shift(get(pcampo), 1, type = "lead")),
