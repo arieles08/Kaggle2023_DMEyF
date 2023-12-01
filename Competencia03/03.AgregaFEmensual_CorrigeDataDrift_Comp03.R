@@ -450,7 +450,7 @@ dim(dataset) #4562810     214
 #Selecciono las variables a corregir:
 cols_to_fix_tot <-intersect(cols_to_fix_tot, colnames(dataset)) #67 32%
 
-#Agrego z-Scale de las variables que quiero corregir: agrega 73 variables iniciadas z_ #214
+#Agrego z-Scale de las variables que quiero corregir: #214
 drift_zscale( cols_to_fix_tot )
 dim(dataset)
 
